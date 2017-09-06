@@ -1,0 +1,77 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: D:\XilinxISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc data_select_constraints.ucf -p
+xc6slx9-tqg144-3 svn_seg.ngc svn_seg.ngd
+
+Reading NGO file "D:/GitHub/FPGA/svn_seg.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "data_select_constraints.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+ERROR:ConstraintSystem:59 - Constraint <NET "DIGIT[3]" LOC = P66;>
+   [data_select_constraints.ucf(51)]: NET "DIGIT[3]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DIGIT[3]" LOC = P66;> [data_select_constraints.ucf(51)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DIGIT[2]" LOC = P74;>
+   [data_select_constraints.ucf(52)]: NET "DIGIT[2]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DIGIT[2]" LOC = P74;> [data_select_constraints.ucf(52)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DIGIT[1]" LOC = P67;>
+   [data_select_constraints.ucf(53)]: NET "DIGIT[1]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DIGIT[1]" LOC = P67;> [data_select_constraints.ucf(53)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DIGIT[0]" LOC = P75;>
+   [data_select_constraints.ucf(54)]: NET "DIGIT[0]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DIGIT[0]" LOC = P75;> [data_select_constraints.ucf(54)]' could not be
+   found and so the Locate constraint will be removed.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     4
+  Number of warnings:   4
+
+Total memory usage is 188080 kilobytes
+
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "svn_seg.bld"...

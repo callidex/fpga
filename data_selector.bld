@@ -2,15 +2,145 @@ Release 14.7 ngdbuild P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: D:\XilinxISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
--intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 data_selector.ngc
-data_selector.ngd
+-intstyle ise -dd _ngo -nt timestamp -uc data_select_constraints.ucf -p
+xc6slx9-tqg144-3 data_selector.ngc data_selector.ngd
 
 Reading NGO file "D:/GitHub/FPGA/data_selector.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
+Annotating constraints to design from ucf file "data_select_constraints.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
+ERROR:ConstraintSystem:59 - Constraint <NET "CLK" LOC = P56;>
+   [data_select_constraints.ucf(1)]: NET "CLK" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "CLK" LOC = P56;> [data_select_constraints.ucf(1)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SEG[7]" LOC = P80;>
+   [data_select_constraints.ucf(41)]: NET "SEG[7]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SEG[7]" LOC = P80;> [data_select_constraints.ucf(41)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SEG[6]" LOC = P79;>
+   [data_select_constraints.ucf(42)]: NET "SEG[6]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SEG[6]" LOC = P79;> [data_select_constraints.ucf(42)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SEG[5]" LOC = P83;>
+   [data_select_constraints.ucf(43)]: NET "SEG[5]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SEG[5]" LOC = P83;> [data_select_constraints.ucf(43)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SEG[4]" LOC = P82;>
+   [data_select_constraints.ucf(44)]: NET "SEG[4]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SEG[4]" LOC = P82;> [data_select_constraints.ucf(44)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SEG[3]" LOC = P81;>
+   [data_select_constraints.ucf(45)]: NET "SEG[3]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SEG[3]" LOC = P81;> [data_select_constraints.ucf(45)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SEG[2]" LOC = P78;>
+   [data_select_constraints.ucf(46)]: NET "SEG[2]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SEG[2]" LOC = P78;> [data_select_constraints.ucf(46)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SEG[1]" LOC = P84;>
+   [data_select_constraints.ucf(47)]: NET "SEG[1]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SEG[1]" LOC = P84;> [data_select_constraints.ucf(47)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SEG[0]" LOC =P85;>
+   [data_select_constraints.ucf(48)]: NET "SEG[0]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SEG[0]" LOC =P85;> [data_select_constraints.ucf(48)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DIGIT[3]" LOC = P66;>
+   [data_select_constraints.ucf(51)]: NET "DIGIT[3]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DIGIT[3]" LOC = P66;> [data_select_constraints.ucf(51)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DIGIT[2]" LOC = P74;>
+   [data_select_constraints.ucf(52)]: NET "DIGIT[2]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DIGIT[2]" LOC = P74;> [data_select_constraints.ucf(52)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DIGIT[1]" LOC = P67;>
+   [data_select_constraints.ucf(53)]: NET "DIGIT[1]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DIGIT[1]" LOC = P67;> [data_select_constraints.ucf(53)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DIGIT[0]" LOC = P75;>
+   [data_select_constraints.ucf(54)]: NET "DIGIT[0]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DIGIT[0]" LOC = P75;> [data_select_constraints.ucf(54)]' could not be
+   found and so the Locate constraint will be removed.
+
 Done...
 
 Checking expanded design ...
@@ -23,13 +153,14 @@ Partition Implementation Status
 -------------------------------
 
 NGDBUILD Design Results Summary:
-  Number of errors:     0
-  Number of warnings:   0
+  Number of errors:    13
+  Number of warnings:  13
 
-Total memory usage is 188076 kilobytes
+Total memory usage is 188068 kilobytes
 
-Writing NGD file "data_selector.ngd" ...
-Total REAL time to NGDBUILD completion:  2 sec
-Total CPU time to NGDBUILD completion:   2 sec
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
 
 Writing NGDBUILD log file "data_selector.bld"...

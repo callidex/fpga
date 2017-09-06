@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/GitHub/FPGA/vlog_mod1.v -lang verilog -prj FPGA -o counter.spl -module counter -template D:/XilinxISE/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 counter.spl d:/github/FPGA/counter.sym 

@@ -1,0 +1,10 @@
+[Inputs]
+CLK
+=D[3:0]=
+[Outputs]
+=SEG[7:0]=
+=DIGIT[3:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel seg_test
+

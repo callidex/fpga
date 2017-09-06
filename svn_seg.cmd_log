@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/GitHub/FPGA/svn_seg.xst" -ofn "D:/GitHub/FPGA/svn_seg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc data_select_constraints.ucf -p xc6slx9-tqg144-3 svn_seg.ngc svn_seg.ngd  

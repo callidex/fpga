@@ -6,14 +6,12 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_1" />
         <signal name="XLXN_4" />
         <signal name="XLXN_5" />
         <signal name="XLXN_6" />
         <signal name="A" />
         <signal name="B" />
         <signal name="SEL" />
-        <signal name="XLXN_10" />
         <signal name="XLXN_11" />
         <signal name="Q" />
         <port polarity="Input" name="A" />

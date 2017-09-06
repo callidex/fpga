@@ -1,0 +1,26 @@
+vhdtdtfi -lib work D:/GitHub/FPGA/seg_test.v -lang verilog -prj FPGA -o seg_test.spl -module seg_test -template D:/XilinxISE/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 seg_test.spl d:/github/FPGA/seg_test.sym 
+xst -intstyle ise -ifn "D:/GitHub/FPGA/seg_test.xst" -ofn "D:/GitHub/FPGA/seg_test.syr" 
+xst -intstyle ise -ifn "D:/GitHub/FPGA/seg_test.xst" -ofn "D:/GitHub/FPGA/seg_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 seg_test.ngc seg_test.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o seg_test_map.ncd seg_test.ngd seg_test.pcf 
+par -w -intstyle ise -ol high -mt off seg_test_map.ncd seg_test.ncd seg_test.pcf 
+bitgen -intstyle ise -f seg_test.ut seg_test.ncd 
+xst -intstyle ise -ifn "D:/GitHub/FPGA/seg_test.xst" -ofn "D:/GitHub/FPGA/seg_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 seg_test.ngc seg_test.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o seg_test_map.ncd seg_test.ngd seg_test.pcf 
+par -w -intstyle ise -ol high -mt off seg_test_map.ncd seg_test.ncd seg_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml seg_test.twx seg_test.ncd -o seg_test.twr seg_test.pcf 
+bitgen -intstyle ise -f seg_test.ut seg_test.ncd 
+xst -intstyle ise -ifn "D:/GitHub/FPGA/seg_test.xst" -ofn "D:/GitHub/FPGA/seg_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 seg_test.ngc seg_test.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o seg_test_map.ncd seg_test.ngd seg_test.pcf 
+par -w -intstyle ise -ol high -mt off seg_test_map.ncd seg_test.ncd seg_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml seg_test.twx seg_test.ncd -o seg_test.twr seg_test.pcf 
+bitgen -intstyle ise -f seg_test.ut seg_test.ncd 
+xst -intstyle ise -ifn "D:/GitHub/FPGA/seg_test.xst" -ofn "D:/GitHub/FPGA/seg_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 seg_test.ngc seg_test.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o seg_test_map.ncd seg_test.ngd seg_test.pcf 
+par -w -intstyle ise -ol high -mt off seg_test_map.ncd seg_test.ncd seg_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml seg_test.twx seg_test.ncd -o seg_test.twr seg_test.pcf 
+bitgen -intstyle ise -f seg_test.ut seg_test.ncd 
