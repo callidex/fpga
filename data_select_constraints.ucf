@@ -1,0 +1,5 @@
+NET "SEL" LOC = "P120" | PULLDOWN;
+# PAUL, Change this when you get the pinout for the spartan-6
+NET "A" LOC = "P121" | PULLDOWN;
+NET "B" LOC = "P122" | PULLDOWN;
+NET "Q" LOC = "P123" | PULLDOWN;
