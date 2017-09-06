@@ -24,7 +24,7 @@ module svn_seg(
     output reg [7:0] SEG
     );
 
-always "(posedge CLK)
+always @(posedge CLK)
 begin
 case (D)
     4'd0: SEG <= 8'b00000011;
