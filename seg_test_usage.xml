@@ -4,8 +4,8 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="8">
-<DesignStatistics TimeStamp="Wed Sep 06 17:57:26 2017"><group name="NetStatistics">
+<DeviceUsageSummary rev="10">
+<DesignStatistics TimeStamp="Thu Sep 07 09:34:14 2017"><group name="NetStatistics">
 <item name="NumNets_Active" rev="8">
 <attrib name="value" value="12"/></item>
 <item name="NumNets_Gnd" rev="8">
@@ -52,23 +52,14 @@
 <attrib name="value" value="6"/></item>
 </group>
 <group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="7">
+<item name="AGG_BONDED_IO" rev="10">
 <attrib name="value" value="12"/></item>
-<item name="AGG_IO" rev="7">
+<item name="AGG_IO" rev="10">
 <attrib name="value" value="12"/></item>
-<item name="NUM_BONDED_IOB" rev="7">
+<item name="NUM_BONDED_IOB" rev="10">
 <attrib name="value" value="12"/></item>
 </group>
 </DesignStatistics>
-<DeviceUsage TimeStamp="Wed Sep 06 17:57:26 2017"><group name="SiteSummary">
-<item name="IOB" rev="8">
-<attrib name="total" value="1000000"/><attrib name="used" value="12"/></item>
-<item name="IOB_OUTBUF" rev="8">
-<attrib name="total" value="1000000"/><attrib name="used" value="12"/></item>
-<item name="PAD" rev="8">
-<attrib name="total" value="1000000"/><attrib name="used" value="12"/></item>
-</group>
-</DeviceUsage>
 <ReportConfigData TimeStamp="Wed Sep 06 17:57:26 2017"><group name="IOB_OUTBUF">
 <item name="DRIVEATTRBOX" rev="8">
 <attrib name="12" value="12"/></item>

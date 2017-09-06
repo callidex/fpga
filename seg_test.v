@@ -29,7 +29,7 @@ assign DIGIT = 4'b1100;
 assign D = 4'b0000;
 svn_seg testmod(.CLK(CLK), .SEG(SEG), .D(D));
 
-
+I2Cs;aveWith8bitsIO slave(.SDA(  , SCL, IOout);
 assign LED1 = 1;
 assign LED2 = 0;
 assign LED3 = 1;
