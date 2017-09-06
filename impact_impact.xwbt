@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=D:\GitHub\FPGA\impact.xsl
+OUTFILE=D:\GitHub\FPGA\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=D:\GitHub\FPGA
+LICENSE=iMPACT
+USER_INFO=iMPACT
