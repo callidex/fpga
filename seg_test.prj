@@ -1,4 +1,3 @@
 verilog work "svn_seg.v"
-verilog work "i2c_slave.v"
 verilog work "seg_test.v"
 verilog work "data_selector.vf"

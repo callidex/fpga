@@ -21,35 +21,39 @@
 module seg_test(
 input CLK,
 output [7:0] SEG,
-output [3:0] DIGIT,
-output LED1,LED2,LED3,LED4
+output [3:0] DIGIT
+//,output LED1,LED2,LED3,LED4
     );
 
 
-assign DIGIT = 4'b1100;
+assign DIGIT = 4'b1110;
 reg [3:0] D;
 
-always @(posedge CLK)
-begin
-		D<=D+1;
-end 
+
 svn_seg testmod(
 		.CLK(CLK), 
 		.SEG(SEG), 
 		.D(D)
 		);
 
-I2CslaveWith8bitsIO slave(
-		.SDA(SDA) , 
-		.SCL(SCL), 
-		.IOout(IOPORT)
-		);
+
+always @(posedge CLK)
+begin
+		D=D+2;
+end 
+
+ 
+ 
+ 
+
+
 		
-assign LED1 = 1;
-assign LED2 = 0;
-assign LED3 = 1;
-assign LED4 = 0;
+//assign LED1 = D[3];
+//assign LED2 = D[2];
+//assign LED3 = D[1];
+//assign LED4 = D[0];
 
 
 endmodule
 
+ 

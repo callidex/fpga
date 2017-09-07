@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Sep 07 12:21:50 2017
+Thu Sep 07 12:43:03 2017
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -93,8 +93,8 @@ Pinout by Pin Number:
 |P71       |           |         |DONE_2                    |         |           |              |          |         |           |         |         |          |           |                |
 |P72       |           |         |CMPCS_B_2                 |         |           |              |          |         |           |         |         |          |           |                |
 |P73       |           |         |SUSPEND                   |         |           |              |          |         |           |         |         |          |           |                |
-|P74       |           |IOBS     |IO_L74N_DOUT_BUSY_1       |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|P75       |           |IOBM     |IO_L74P_AWAKE_1           |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|P74       |DIGIT<3>   |IOB      |IO_L74N_DOUT_BUSY_1       |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
+|P75       |DIGIT<2>   |IOB      |IO_L74P_AWAKE_1           |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |P76       |           |         |VCCO_1                    |         |           |1             |          |         |           |         |2.50     |          |           |                |
 |P77       |           |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |P78       |SEG<5>     |IOB      |IO_L47N_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
@@ -106,18 +106,18 @@ Pinout by Pin Number:
 |P84       |SEG<6>     |IOB      |IO_L43N_GCLK4_1           |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |P85       |SEG<7>     |IOB      |IO_L43P_GCLK5_1           |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |P86       |           |         |VCCO_1                    |         |           |1             |          |         |           |         |2.50     |          |           |                |
-|P87       |DIGIT<3>   |IOB      |IO_L42N_GCLK6_TRDY1_1     |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|P88       |DIGIT<2>   |IOB      |IO_L42P_GCLK7_1           |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
+|P87       |DIGIT<1>   |IOB      |IO_L42N_GCLK6_TRDY1_1     |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
+|P88       |DIGIT<0>   |IOB      |IO_L42P_GCLK7_1           |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |P89       |           |         |VCCINT                    |         |           |              |          |         |           |         |1.2      |          |           |                |
 |P90       |           |         |VCCAUX                    |         |           |              |          |         |           |         |2.5      |          |           |                |
 |P91       |           |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
-|P92       |DIGIT<1>   |IOB      |IO_L41N_GCLK8_1           |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|P93       |DIGIT<0>   |IOB      |IO_L41P_GCLK9_IRDY1_1     |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|P94       |LED2       |IOB      |IO_L40N_GCLK10_1          |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
-|P95       |LED1       |IOB      |IO_L40P_GCLK11_1          |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|P92       |           |IOBS     |IO_L41N_GCLK8_1           |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|P93       |           |IOBM     |IO_L41P_GCLK9_IRDY1_1     |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|P94       |           |IOBS     |IO_L40N_GCLK10_1          |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|P95       |           |IOBM     |IO_L40P_GCLK11_1          |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P96       |           |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
-|P97       |LED4       |IOB      |IO_L34N_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
-|P98       |LED3       |IOB      |IO_L34P_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|P97       |           |IOBS     |IO_L34N_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|P98       |           |IOBM     |IO_L34P_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P99       |           |IOBS     |IO_L33N_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P100      |           |IOBM     |IO_L33P_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P101      |           |IOBS     |IO_L32N_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |

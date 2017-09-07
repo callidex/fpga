@@ -7,7 +7,7 @@
 // \   \   \/     Version: P.20131013
 //  \   \         Application: netgen
 //  /   /         Filename: seg_test_synthesis.v
-// /___/   /\     Timestamp: Thu Sep 07 11:25:41 2017
+// /___/   /\     Timestamp: Thu Sep 07 12:46:23 2017
 // \   \  /  \ 
 //  \___\/\___\
 //             
@@ -39,10 +39,10 @@ module seg_test (
   input CLK;
   output [7 : 0] SEG;
   output [3 : 0] DIGIT;
-  wire DIGIT_2_OBUF_0;
+  wire DIGIT_1_OBUF_0;
   wire DIGIT_0_OBUF_1;
   VCC   XST_VCC (
-    .P(DIGIT_2_OBUF_0)
+    .P(DIGIT_1_OBUF_0)
   );
   GND   XST_GND (
     .G(DIGIT_0_OBUF_1)
@@ -72,23 +72,23 @@ module seg_test (
     .O(SEG[2])
   );
   OBUF   SEG_1_OBUF (
-    .I(DIGIT_2_OBUF_0),
+    .I(DIGIT_0_OBUF_1),
     .O(SEG[1])
   );
   OBUF   SEG_0_OBUF (
-    .I(DIGIT_2_OBUF_0),
+    .I(DIGIT_0_OBUF_1),
     .O(SEG[0])
   );
   OBUF   DIGIT_3_OBUF (
-    .I(DIGIT_2_OBUF_0),
+    .I(DIGIT_1_OBUF_0),
     .O(DIGIT[3])
   );
   OBUF   DIGIT_2_OBUF (
-    .I(DIGIT_2_OBUF_0),
+    .I(DIGIT_1_OBUF_0),
     .O(DIGIT[2])
   );
   OBUF   DIGIT_1_OBUF (
-    .I(DIGIT_0_OBUF_1),
+    .I(DIGIT_1_OBUF_0),
     .O(DIGIT[1])
   );
   OBUF   DIGIT_0_OBUF (

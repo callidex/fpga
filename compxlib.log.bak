@@ -12,6 +12,7 @@ Release 14.7 - D:\XilinxISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\compxlib.exe 14.7
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Processing command line ...
+Reading the compxlib configuration file - 'compxlib.cfg' ...
 Library Source Paths => 'D:/XilinxISE/14.7/ISE_DS/ISE'
 Current Working Directory => 'D:\GitHub\FPGA'
 Compilation Mode = FAST

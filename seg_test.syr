@@ -107,8 +107,6 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file "D:\GitHub\FPGA\svn_seg.v" into library work
 Parsing module <svn_seg>.
-Analyzing Verilog file "D:\GitHub\FPGA\i2c_slave.v" into library work
-Parsing module <I2CslaveWith8bitsIO>.
 Analyzing Verilog file "D:\GitHub\FPGA\seg_test.v" into library work
 Parsing module <seg_test>.
 Analyzing Verilog file "D:\GitHub\FPGA\data_selector.vf" into library work
@@ -119,14 +117,9 @@ Parsing module <data_selector>.
 =========================================================================
 
 Elaborating module <seg_test>.
-WARNING:HDLCompiler:413 - "D:\GitHub\FPGA\seg_test.v" Line 34: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <svn_seg>.
-
-Elaborating module <I2CslaveWith8bitsIO>.
-WARNING:HDLCompiler:189 - "D:\GitHub\FPGA\seg_test.v" Line 45: Size mismatch in connection of port <IOout>. Formal port size is 8-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "D:\GitHub\FPGA\seg_test.v" Line 45: Assignment to IOPORT ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "D:\GitHub\FPGA\seg_test.v" Line 44: Net <SCL> does not have a driver.
+WARNING:HDLCompiler:413 - "D:\GitHub\FPGA\seg_test.v" Line 42: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -134,10 +127,8 @@ WARNING:HDLCompiler:634 - "D:\GitHub\FPGA\seg_test.v" Line 44: Net <SCL> does no
 
 Synthesizing Unit <seg_test>.
     Related source file is "D:\GitHub\FPGA\seg_test.v".
-INFO:Xst:3210 - "D:\GitHub\FPGA\seg_test.v" line 42: Output port <IOout> of the instance <slave> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <SCL> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 4-bit register for signal <D>.
-    Found 4-bit adder for signal <D[3]_GND_1_o_add_2_OUT> created at line 34.
+    Found 4-bit adder for signal <D[3]_GND_1_o_add_2_OUT> created at line 42.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   4 D-type flip-flop(s).
@@ -145,57 +136,19 @@ Unit <seg_test> synthesized.
 
 Synthesizing Unit <svn_seg>.
     Related source file is "D:\GitHub\FPGA\svn_seg.v".
-    Found 8-bit register for signal <SEG>.
-    Found 16x8-bit Read Only RAM for signal <D[3]_GND_2_o_wide_mux_1_OUT>
+    WARNING:Xst:2404 -  FFs/Latches <SEG<1:8>> (without init value) have a constant value of 0 in block <svn_seg>.
     Summary:
-	inferred   1 RAM(s).
-	inferred   8 D-type flip-flop(s).
+	no macro.
 Unit <svn_seg> synthesized.
-
-Synthesizing Unit <I2CslaveWith8bitsIO>.
-    Related source file is "D:\GitHub\FPGA\i2c_slave.v".
-        I2C_ADR = 7'b0100111
-WARNING:Xst - Value "1" of property "keep" is not applicable. List of valid values is "false, no, soft, true, yes" 
-WARNING:Xst - Value "1" of property "keep" is not applicable. List of valid values is "false, no, soft, true, yes" 
-    Found 1-bit register for signal <SDAr>.
-    Found 1-bit register for signal <got_ACK>.
-    Found 1-bit register for signal <adr_match>.
-    Found 1-bit register for signal <op_read>.
-    Found 8-bit register for signal <mem>.
-    Found 4-bit register for signal <bitcnt>.
-    Found 4-bit subtractor for signal <bitcnt[3]_GND_3_o_sub_1_OUT> created at line 60.
-    Found 1-bit 8-to-1 multiplexer for signal <bitcnt[2]_mem[7]_Mux_24_o> created at line 93.
-    Found 1-bit tristate buffer for signal <SDA_shadow> created at line 97
-    Found 4-bit comparator lessequal for signal <n0055> created at line 90
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  16 D-type flip-flop(s).
-	inferred   1 Comparator(s).
-	inferred  10 Multiplexer(s).
-	inferred   1 Tristate(s).
-Unit <I2CslaveWith8bitsIO> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
- 16x8-bit single-port Read Only RAM                    : 1
-# Adders/Subtractors                                   : 2
+# Adders/Subtractors                                   : 1
  4-bit adder                                           : 1
- 4-bit subtractor                                      : 1
-# Registers                                            : 8
- 1-bit register                                        : 4
- 4-bit register                                        : 2
- 8-bit register                                        : 2
-# Comparators                                          : 1
- 4-bit comparator lessequal                            : 1
-# Multiplexers                                         : 10
- 1-bit 2-to-1 multiplexer                              : 8
- 1-bit 8-to-1 multiplexer                              : 1
- 4-bit 2-to-1 multiplexer                              : 1
-# Tristates                                            : 1
- 1-bit tristate buffer                                 : 1
+# Registers                                            : 1
+ 4-bit register                                        : 1
 
 =========================================================================
 
@@ -203,70 +156,25 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <slave> is unconnected in block <seg_test>.
-   It will be removed from the design.
-
-Synthesizing (advanced) Unit <I2CslaveWith8bitsIO>.
-The following registers are absorbed into counter <bitcnt>: 1 register on signal <bitcnt>.
-Unit <I2CslaveWith8bitsIO> synthesized (advanced).
 
 Synthesizing (advanced) Unit <seg_test>.
-The following registers are absorbed into counter <D>: 1 register on signal <D>.
+The following registers are absorbed into accumulator <D>: 1 register on signal <D>.
 Unit <seg_test> synthesized (advanced).
-
-Synthesizing (advanced) Unit <svn_seg>.
-INFO:Xst:3231 - The small RAM <Mram_D[3]_GND_2_o_wide_mux_1_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <D>             |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-Unit <svn_seg> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
- 16x8-bit single-port distributed Read Only RAM        : 1
-# Counters                                             : 2
- 4-bit down counter                                    : 1
- 4-bit up counter                                      : 1
-# Registers                                            : 20
- Flip-Flops                                            : 20
-# Comparators                                          : 1
- 4-bit comparator lessequal                            : 1
-# Multiplexers                                         : 9
- 1-bit 2-to-1 multiplexer                              : 8
- 1-bit 8-to-1 multiplexer                              : 1
+# Accumulators                                         : 1
+ 4-bit up accumulator                                  : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <op_read> (without init value) has a constant value of 0 in block <I2CslaveWith8bitsIO>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <adr_match> (without init value) has a constant value of 0 in block <I2CslaveWith8bitsIO>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <SDAr> (without init value) has a constant value of 0 in block <I2CslaveWith8bitsIO>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <got_ACK> (without init value) has a constant value of 0 in block <I2CslaveWith8bitsIO>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mem_0> (without init value) has a constant value of 0 in block <I2CslaveWith8bitsIO>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mem_1> (without init value) has a constant value of 0 in block <I2CslaveWith8bitsIO>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mem_2> (without init value) has a constant value of 0 in block <I2CslaveWith8bitsIO>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mem_3> (without init value) has a constant value of 0 in block <I2CslaveWith8bitsIO>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mem_4> (without init value) has a constant value of 0 in block <I2CslaveWith8bitsIO>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mem_5> (without init value) has a constant value of 0 in block <I2CslaveWith8bitsIO>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mem_6> (without init value) has a constant value of 0 in block <I2CslaveWith8bitsIO>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mem_7> (without init value) has a constant value of 0 in block <I2CslaveWith8bitsIO>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <SEG_7> (without init value) has a constant value of 0 in block <svn_seg>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <seg_test> ...
-
-Optimizing unit <svn_seg> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -277,10 +185,7 @@ Final Macro Processing ...
 =========================================================================
 Final Register Report
 
-Macro Statistics
-# Registers                                            : 11
- Flip-Flops                                            : 11
-
+Found no macro
 =========================================================================
 
 =========================================================================
@@ -302,19 +207,11 @@ Top Level Output File Name         : seg_test.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 13
+# BELS                             : 2
 #      GND                         : 1
-#      INV                         : 1
-#      LUT2                        : 1
-#      LUT3                        : 1
-#      LUT4                        : 8
 #      VCC                         : 1
-# FlipFlops/Latches                : 11
-#      FD                          : 11
-# Clock Buffers                    : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 16
-#      OBUF                        : 16
+# IO Buffers                       : 12
+#      OBUF                        : 12
 
 Device utilization summary:
 ---------------------------
@@ -323,23 +220,19 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              11  out of  11440     0%  
- Number of Slice LUTs:                   11  out of   5720     0%  
-    Number used as Logic:                11  out of   5720     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     11
-   Number with an unused Flip Flop:       0  out of     11     0%  
-   Number with an unused LUT:             0  out of     11     0%  
-   Number of fully used LUT-FF pairs:    11  out of     11   100%  
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          17
- Number of bonded IOBs:                  17  out of    102    16%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                  12  out of    102    11%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -359,11 +252,7 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 11    |
------------------------------------+------------------------+-------+
+No clock signals found in this design
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -373,9 +262,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.216ns (Maximum Frequency: 451.233MHz)
+   Minimum period: No path found
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 3.597ns
+   Maximum output required time after clock: No path found
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -383,70 +272,21 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 2.216ns (frequency: 451.233MHz)
-  Total number of paths / destination ports: 38 / 11
--------------------------------------------------------------------------
-Delay:               2.216ns (Levels of Logic = 1)
-  Source:            D_0 (FF)
-  Destination:       D_0 (FF)
-  Source Clock:      CLK rising
-  Destination Clock: CLK rising
-
-  Data Path: D_0 to D_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q              11   0.447   0.882  D_0 (D_0)
-     INV:I->O              1   0.206   0.579  Mcount_D_xor<0>11_INV_0 (Result<0>)
-     FD:D                      0.102          D_0
-    ----------------------------------------
-    Total                      2.216ns (0.755ns logic, 1.461ns route)
-                                       (34.1% logic, 65.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 7 / 7
--------------------------------------------------------------------------
-Offset:              3.597ns (Levels of Logic = 1)
-  Source:            testmod/SEG_6 (FF)
-  Destination:       SEG<6> (PAD)
-  Source Clock:      CLK rising
-
-  Data Path: testmod/SEG_6 to SEG<6>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q               1   0.447   0.579  testmod/SEG_6 (testmod/SEG_6)
-     OBUF:I->O                 2.571          SEG_6_OBUF (SEG<6>)
-    ----------------------------------------
-    Total                      3.597ns (3.018ns logic, 0.579ns route)
-                                       (83.9% logic, 16.1% route)
-
-=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
-
-Clock to Setup on destination clock CLK
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |    2.216|         |         |         |
----------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.13 secs
+Total CPU time to Xst completion: 4.72 secs
  
 --> 
 
 Total memory usage is 279128 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   21 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

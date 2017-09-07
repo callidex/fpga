@@ -50,5 +50,7 @@ ERROR:Compxlib - COMPXLIB[sim]: Unable to automatically find executables for sim
    C:\Users\paul.LOCAL\AppData\Roaming\Dashlane\4.8.3.33797\ucrt
    C:\Users\paul.LOCAL\AppData\Local\GitHubDesktop\bin
    C:\Users\paul.LOCAL\AppData\Roaming\Dashlane\4.8.6.35647\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components
-   C:\Users\paul.LOCAL\AppData\Roaming\Dashlane\4.8.6.35647\ucrt.
+   C:\Users\paul.LOCAL\AppData\Roaming\Dashlane\4.8.6.35647\ucrt
+   c:\program files\git\bin
+   c:\program files\git\cmd.
 Simulator 'mti_se' is ignored.
