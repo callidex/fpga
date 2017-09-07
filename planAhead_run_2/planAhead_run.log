@@ -1,0 +1,130 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -7 day(s)
+INFO: [Device 21-36] Loading parts and site information from D:/XilinxISE/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/XilinxISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/XilinxISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/GitHub/FPGA/pa.fromNetlist.tcl
+# create_project -name FPGA -dir "D:/GitHub/FPGA/planAhead_run_2" -part xc6slx9tqg144-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "D:/GitHub/FPGA/seg_test.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {D:/GitHub/FPGA} }
+# set_property target_constrs_file "seg_test.ucf" [current_fileset -constrset]
+Adding file 'D:/github/FPGA/seg_test.ucf' to fileset 'constrs_1'
+# add_files [list {seg_test.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx9tqg144-3
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design seg_test.ngc ...
+WARNING:NetListWriters:298 - No output is written to seg_test.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file seg_test.edif ...
+ngc2edif: Total memory usage is 78500 kilobytes
+
+Parsing EDIF File [D:/GitHub/FPGA/planAhead_run_2/FPGA.data/cache/seg_test_ngc_zx.edif]
+Finished Parsing EDIF File [D:/GitHub/FPGA/planAhead_run_2/FPGA.data/cache/seg_test_ngc_zx.edif]
+Loading clock regions from D:/XilinxISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockRegion.xml
+Loading clock buffers from D:/XilinxISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockBuffers.xml
+Loading package pin functions from D:/XilinxISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from D:/XilinxISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/tqg144/Package.xml
+Loading io standards from D:/XilinxISE/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from D:/XilinxISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : D:/XilinxISE/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [D:/github/FPGA/seg_test.ucf]
+Finished Parsing UCF File [D:/github/FPGA/seg_test.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 820fcb7b
+link_design: Time (s): elapsed = 00:00:07 . Memory (MB): peak = 645.727 ; gain = 193.941
+refresh_design
+Parsing UCF File [D:/github/FPGA/seg_test.ucf]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'SDA' [D:/github/FPGA/seg_test.ucf:6]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'SCL' [D:/github/FPGA/seg_test.ucf:7]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IOPORT' [D:/github/FPGA/seg_test.ucf:8]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IRDA' [D:/github/FPGA/seg_test.ucf:10]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 61 [D:/github/FPGA/seg_test.ucf:12]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 59 [D:/github/FPGA/seg_test.ucf:13]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site 55 [D:/github/FPGA/seg_test.ucf:14]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ADCSN' [D:/github/FPGA/seg_test.ucf:18]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ADDAT' [D:/github/FPGA/seg_test.ucf:19]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ADCLK' [D:/github/FPGA/seg_test.ucf:20]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_R[4]' [D:/github/FPGA/seg_test.ucf:23]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_R[3]' [D:/github/FPGA/seg_test.ucf:24]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_R[2]' [D:/github/FPGA/seg_test.ucf:25]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_R[1]' [D:/github/FPGA/seg_test.ucf:26]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_R[0]' [D:/github/FPGA/seg_test.ucf:27]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_G[5]' [D:/github/FPGA/seg_test.ucf:28]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_G[4]' [D:/github/FPGA/seg_test.ucf:29]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_G[3]' [D:/github/FPGA/seg_test.ucf:30]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_G[2]' [D:/github/FPGA/seg_test.ucf:31]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_G[1]' [D:/github/FPGA/seg_test.ucf:32]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_G[0]' [D:/github/FPGA/seg_test.ucf:33]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_B[4]' [D:/github/FPGA/seg_test.ucf:34]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_B[3]' [D:/github/FPGA/seg_test.ucf:35]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_B[2]' [D:/github/FPGA/seg_test.ucf:36]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_B[1]' [D:/github/FPGA/seg_test.ucf:37]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_B[0]' [D:/github/FPGA/seg_test.ucf:38]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'V_SYNC' [D:/github/FPGA/seg_test.ucf:39]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'H_SYNC' [D:/github/FPGA/seg_test.ucf:40]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'KEY2' [D:/github/FPGA/seg_test.ucf:48]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'KEY1' [D:/github/FPGA/seg_test.ucf:49]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'KEY4' [D:/github/FPGA/seg_test.ucf:50]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'KEY3' [D:/github/FPGA/seg_test.ucf:51]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'TXD' [D:/github/FPGA/seg_test.ucf:54]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'RXD' [D:/github/FPGA/seg_test.ucf:55]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'BP1' [D:/github/FPGA/seg_test.ucf:58]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'LED[0]' [D:/github/FPGA/seg_test.ucf:104]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'LED[1]' [D:/github/FPGA/seg_test.ucf:105]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'LED[2]' [D:/github/FPGA/seg_test.ucf:106]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'LED[3]' [D:/github/FPGA/seg_test.ucf:107]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DS_DP' [D:/github/FPGA/seg_test.ucf:117]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DS_G' [D:/github/FPGA/seg_test.ucf:118]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DS_C' [D:/github/FPGA/seg_test.ucf:119]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DS_D' [D:/github/FPGA/seg_test.ucf:120]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DS_E' [D:/github/FPGA/seg_test.ucf:121]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DS_A' [D:/github/FPGA/seg_test.ucf:122]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DS_B' [D:/github/FPGA/seg_test.ucf:123]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DS_F' [D:/github/FPGA/seg_test.ucf:124]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DS_EN1' [D:/github/FPGA/seg_test.ucf:126]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DS_EN2' [D:/github/FPGA/seg_test.ucf:127]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DS_EN3' [D:/github/FPGA/seg_test.ucf:128]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DS_EN4' [D:/github/FPGA/seg_test.ucf:129]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DNC' [D:/github/FPGA/seg_test.ucf:131]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'EXT_P' [D:/github/FPGA/seg_test.ucf:134]
+INFO: [Common 17-14] Message 'Constraints 18-11' appears 50 times and further instances of the messages will be disabled. Use the Tcl command set_msg_limit to change the current settings.
+CRITICAL WARNING: [Constraints 18-10] Could not create constraint 'CLOCK_DEDICATED_ROUTE' [D:/github/FPGA/seg_test.ucf:138]
+Finished Parsing UCF File [D:/github/FPGA/seg_test.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+refresh_design
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design seg_test.ngc ...
+WARNING:NetListWriters:298 - No output is written to seg_test.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file seg_test.edif ...
+ngc2edif: Total memory usage is 78500 kilobytes
+
+Parsing EDIF File [D:/GitHub/FPGA/planAhead_run_2/FPGA.data/cache/seg_test_ngc_zx.edif]
+Finished Parsing EDIF File [D:/GitHub/FPGA/planAhead_run_2/FPGA.data/cache/seg_test_ngc_zx.edif]
+Parsing UCF File [D:/github/FPGA/seg_test.ucf]
+Finished Parsing UCF File [D:/github/FPGA/seg_test.ucf]
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Sep 07 11:33:54 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Sep 06 17:57:23 2017
+Thu Sep 07 11:59:24 2017
 
 drc -z seg_test.ncd seg_test.pcf
 

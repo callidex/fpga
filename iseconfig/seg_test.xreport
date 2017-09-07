@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-09-06T18:21:31</DateModified>
+  <DateModified>2017-09-07T11:39:33</DateModified>
   <ModuleName>seg_test</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>D:/GitHub/FPGA/iseconfig/seg_test.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/github/FPGA</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>D:/github/FPGA\</ImplementationReportsDirectory>
   <DateInitialized>2017-09-06T18:21:31</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
